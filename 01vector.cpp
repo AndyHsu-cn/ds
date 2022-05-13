@@ -101,7 +101,7 @@ int main()
     
     for (int i = 0; i < RAND_OP; i++){
         op = rand() % 4;
-        ind = (vec->length == 0? 0: rand() % vec->length);
+        ind = rand() % (vec->length + 1);
         
         switch (op)
         {
