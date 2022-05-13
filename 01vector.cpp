@@ -75,7 +75,7 @@ int erase(Vector * vec, int ind, int *val){
 
 // 输出顺序表
 void output(Vector * vec){
-    printf("Vec[%d] = {", vec->size);
+    printf("Vec[%d] = {", vec->length);
     for(int i = 0; i < vec->length; i++){
         if(i != 0) printf(", ");
         printf("%d", vec->data[i]);
@@ -101,7 +101,7 @@ int main()
     
     for (int i = 0; i < RAND_OP; i++){
         op = rand() % 4;
-        ind = rand() % (vec->length + 1);
+        ind =  (vec->length == 0 ? 0: rand()%vec->length);
         
         switch (op)
         {
