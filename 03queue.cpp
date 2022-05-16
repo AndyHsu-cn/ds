@@ -115,7 +115,6 @@ int main()
         }
         output(q);
     }
-    printf("Queue head pos: %d\n", q->head);
-
+    
     return 0;
 }
